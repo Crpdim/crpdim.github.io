@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://crpdim.github.io</id>
+    <title>Carpe diem</title>
+    <subtitle>採擷今日!</subtitle>
+    <icon>https://crpdim.github.io/images/favicon.ico</icon>
+    <link href="https://crpdim.github.io" />
+    <author>
+      <name>Jesper</name>
+    </author>
+    <updated>2022-09-20T12:46:25.000Z</updated>
+    <category term="吼吼吼" />
+    <entry>
+        <id>https://crpdim.github.io/computer-science/programming-language/python/pyqt5_m1/</id>
+        <title>M1安装pyqt5</title>
+        <link rel="alternate" href="https://crpdim.github.io/computer-science/programming-language/python/pyqt5_m1/"/>
+        <content type="html">&lt;h1 id=&#34;m1安装pyqt5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#m1安装pyqt5&#34;&gt;#&lt;/a&gt; M1 安装 pyqt5&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 m1 上无法使用 pip 安装 pyqt5，总结一下安装经验&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-用homebrew安装-qt-sip-pyqt5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-用homebrew安装-qt-sip-pyqt5&#34;&gt;#&lt;/a&gt; 1. 用 Homebrew 安装 qt、sip、PyQt5&lt;/h2&gt;
+&lt;h3 id=&#34;终端中输入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#终端中输入&#34;&gt;#&lt;/a&gt; 终端中输入&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;brew &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; qt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;brew &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; sip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;brew &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; pyqt5&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;检查安装情况&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查安装情况&#34;&gt;#&lt;/a&gt; 检查安装情况：&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;brew list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;2-找到刚安装的pyqt5的库文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-找到刚安装的pyqt5的库文件&#34;&gt;#&lt;/a&gt; 2. 找到刚安装的 pyqt5 的库文件&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 库文件所在位置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;/opt/homebrew/Cellar/pyqt@5/5.15.7_2/lib/python3.9/site-packages&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;3-将site-packages中的文件复制到python环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-将site-packages中的文件复制到python环境&#34;&gt;#&lt;/a&gt; 3. 将 site-packages 中的文件复制到 python 环境&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#我使用 miniforge 创建的 python 虚拟环境所在位置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;/Users/crpdim/miniforge3/envs/MyEnv/lib/python3.9/site-packages&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;使用cp命令将pyqt5库文件复制到python环境&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-r&lt;/span&gt; /opt/homebrew/Cellar/pyqt@5/5.15.7_2/lib/python3.9/site-packages/. /opt/homebrew/Cellar/pyqt@5/5.15.7_2/lib/python3.9/site-packages&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;4-检查是否能正常使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-检查是否能正常使用&#34;&gt;#&lt;/a&gt; 4. 检查是否能正常使用&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;import PyQt5&lt;/code&gt;  没发生异常则表示能正常使用&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;MyEnv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; crpdim@MyComputer ~ %python&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Python &lt;span class=&#34;token number&#34;&gt;3.9&lt;/span&gt;.16 &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;main, Mar  &lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2023&lt;/span&gt;, 04:29:24&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;Clang &lt;span class=&#34;token number&#34;&gt;14.0&lt;/span&gt;.6 &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; :: Anaconda, Inc. on darwin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Type &lt;span class=&#34;token string&#34;&gt;&#34;help&#34;&lt;/span&gt;, &lt;span class=&#34;token string&#34;&gt;&#34;copyright&#34;&lt;/span&gt;, &lt;span class=&#34;token string&#34;&gt;&#34;credits&#34;&lt;/span&gt; or &lt;span class=&#34;token string&#34;&gt;&#34;license&#34;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;more&lt;/span&gt; information.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;import&lt;/span&gt; PyQt5&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="计算机科学" scheme="https://crpdim.github.io/categories/computer-science/" />
+        <category term="编程语言" scheme="https://crpdim.github.io/categories/computer-science/programming-language/" />
+        <category term="Python" scheme="https://crpdim.github.io/categories/computer-science/programming-language/python/" />
+        <category term="Python" scheme="https://crpdim.github.io/tags/Python/" />
+        <updated>2022-09-20T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://crpdim.github.io/computer-science/note/docker/</id>
+        <title>Docker学习</title>
+        <link rel="alternate" href="https://crpdim.github.io/computer-science/note/docker/"/>
+        <content type="html">&lt;h1 id=&#34;docker&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#docker&#34;&gt;#&lt;/a&gt; Docker&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将硬件资源比作开发商拥有的一块地，那么物理机就可以看作一栋别墅，而虚拟机则可以看做楼房，容器的作用则相当于在房间中进行隔断，可以最大化利用资源。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;虚拟化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#虚拟化&#34;&gt;#&lt;/a&gt; 虚拟化&lt;/h2&gt;
+&lt;p&gt;虚拟化 (英语：Virtualization) 是一种资源管理技术，是将计算机的各种实体资源，如服 务器、网络、内存及存储等，予以抽象、转换后呈现出来，&lt;strong&gt;打破实体结构间的不可切割的障碍，使用户可以比原本的组态更好的方式来应用这些资源&lt;/strong&gt;。这些资源的新虚拟部份是不受现有资源的架设方式，地域或物理组态所限制。一般所指的虚拟化资源包括计算能力和资料存储。&lt;/p&gt;
+&lt;h2 id=&#34;docker-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#docker-2&#34;&gt;#&lt;/a&gt; Docker&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Docker 是一个开发，运输和运行应用程序的开放平台。 Docker 使您可以将应用程序与基础架构分离， 以便快速交付软件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h3&gt;
+&lt;p&gt;使用 Docker，您可以像管理应用程序一样管理&lt;strong&gt;基础架构&lt;/strong&gt; (OS)。 通过利用 Docker 的方法快速发送，测试和部署代码，您可以显着减少编写代码和在生产中运行代码之间的延迟。&lt;/p&gt;
+&lt;p&gt;容器提供了隔离性，结论是，容器可以为各种测试提供很好的&lt;strong&gt;沙盒环境&lt;/strong&gt;。并且，容器本身就具有 “标准性” 的特征，非常适合为服务创建构建块。Docker 的一些应用场景如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加速本地开发和构建流程，使其更加高效、更加轻量化。本地开发人员可以构建、运行并分享 Docker 容器。容器可以在开发环境中构建，然后轻松的提交到测试环境中，并最终进入生产环 境。 开发人员与运维人员进行职责的逻辑分离&lt;/li&gt;
+&lt;li&gt;能够让独立的服务或应用程序在不同的环境中，得到相同的运行结果。这一点在面向服务的架构和 重度依赖微型服务的部署由其实用。&lt;/li&gt;
+&lt;li&gt;用 Docker 创建隔离的环境来进行测试。例如，用 Jenkins CI 这样的持续集成工具启动一个用于测试 的容器。(持续化集成 war 实际部署:jenkins 持续化集成 Jenkins + git)&lt;/li&gt;
+&lt;li&gt;Docker 可以让开发者先在本机上构建一个复杂的程序或架构来进行测试，而不是一开始就在生产 环境部署、测试。&lt;/li&gt;
+&lt;li&gt;构建一个多用户的平台即服务 (&lt;strong&gt;PaaS&lt;/strong&gt;) 基础设施&lt;/li&gt;
+&lt;li&gt;为开发、测试提供一个轻量级的独立的沙盒环境&lt;/li&gt;
+&lt;li&gt;提供软件即服务 (SaaS) 应用程序，例如 Memcached 即服务&lt;/li&gt;
+&lt;li&gt;高性能、超大规模的宿主机部署 (可以很多容器)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;沙盒：在计算机安全领域，沙盒 (英语:sandbox，又译为沙箱) 是一种安全机制，为运行中的程序提供的隔 离环境。通常是作为一些来源不可信、具破坏力或无法判定程序意图的程序提供实验之用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;集装箱思想&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#集装箱思想&#34;&gt;#&lt;/a&gt; 集装箱思想&lt;/h3&gt;
+&lt;p&gt;Docker 借鉴了标准&lt;strong&gt;集装箱的概念&lt;/strong&gt;。标准集装箱将货物运往世界各地，Dock 将这个模型运用到自己的设计中，唯一不同的是：集装箱运输货物，而 Docker 运输软件、应用程序。&lt;/p&gt;
+&lt;p&gt;和集装箱一样，Docker 在执行上述操作时，&lt;strong&gt;并不关心容器中到底装了什么&lt;/strong&gt;，它不管是 web 服务器，还是数据库，或者是应用程序服务器什么的。所有的容器都按照相同的方式将内容 “装载” 进去。&lt;/p&gt;
+&lt;p&gt;Docker 也不关心你要把容器运到何方：我们可以在自己的笔记本中构建容器，上传到 Registry，然后下载到一个物理的或者虚拟的服务器来测试，在把容器部署到具体的主机中。像标准集装箱一样，Docker 容器方便替换，可以叠加，易于分发，并且尽量通用。&lt;/p&gt;
+&lt;h3 id=&#34;docker架构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#docker架构&#34;&gt;#&lt;/a&gt; Docker 架构&lt;/h3&gt;
+&lt;p&gt;三部分构成：Client、docker_host、Registry&lt;/p&gt;
+&lt;h4 id=&#34;client客户端用户操作-发送命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#client客户端用户操作-发送命令&#34;&gt;#&lt;/a&gt; Client（客户端）：用户操作 -&amp;gt; 发送命令&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;docker build&lt;/li&gt;
+&lt;li&gt;docker pull&lt;/li&gt;
+&lt;li&gt;docker run&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;dockerhostdocker引擎解析客户端发送的命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dockerhostdocker引擎解析客户端发送的命令&#34;&gt;#&lt;/a&gt; DOCKER—HOST（docker 引擎）：解析客户端发送的命令&lt;/h4&gt;
+&lt;p&gt;分两部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Image (镜像)：特殊文件叠加而成，镜像文件从镜像仓库中拉取。&lt;/li&gt;
+&lt;li&gt;Containers (容器)：创建容器必须依赖镜像！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;registry镜像仓库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#registry镜像仓库&#34;&gt;#&lt;/a&gt; Registry（镜像仓库）&lt;/h4&gt;
+&lt;h2 id=&#34;docker命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#docker命令&#34;&gt;#&lt;/a&gt; Docker 命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;docker 运行： &lt;code&gt;docker run 镜像名&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列出本地镜像 &lt;code&gt;docker images&lt;/code&gt; ：列出镜像名、版本、id、建立时间、大小&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查找镜像： &lt;code&gt;docker search 镜像名&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拉取镜像： &lt;code&gt;docker pull 镜像名[:version]&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Docker 镜像首页，包括官方镜像和其它公开镜像。Docker Hub 上最受欢迎的 10 大镜像 (通过 Docker registry API 获取不了镜像被 pull 的个数，只能通过镜像的 stars 数量，来衡量镜像的流行度。毫无疑问， 拥有最高 stars 数量的库都是官方库。国情的原因，国内下载 Docker HUB 官方的相关镜像比较慢，可以使用国内 (&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RvY2tlci5pbw==&#34;&gt;docker.io&lt;/span&gt;) 的一些镜像加速器，镜像保持和官方一致，关键是速度块，推荐使用。配置镜像加速器:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除镜像&lt;/p&gt;
+&lt;figure class=&#34;highlight dockerfile&#34;&gt;&lt;figcaption data-lang=&#34;Docker&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;1、删除一个镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docker rmi 镜像名/id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2、删除多个镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docker rmi 镜像名1/id1 镜像名2/id2 ...&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;3、删除所有镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docker rmi `docker images -q`&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建容器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run [options] image command [ARG...] 
+创建交互式容器（exit 容器停止）
+docker run -i -t --name=c1 centos/bin/bash
+创建守护式容器（exit 容器不停止）
+docker run -d --name=c2 centos/bin/bash
+options选项: -i、-t、-d、--name
+-i:交互式容器
+-t:tty，终端(分配一个终端，操作容器)
+--name：指定容器名称
+-d:后台运行，并且打印容器id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入容器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;方式一:
+docker attach 容器名称/id  (ps:exit,容器停止)
+eg:docker attach u3
+方式二:
+docker exec -it 容器名称/id /bin/bash (ps:exit,容器不会停止)
+eg:docker exec -it u3 /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看容器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker ps:查看正在运行的容器
+docker ps -a:查看运行过的容器(历史) 
+docker ps -l:最后一次运行的容器
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启动 / 停止容器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker start 容器名称/id 
+docker stop 容器名称/id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取容器 / 镜像元数据&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;查看容器/镜像全部信息: 
+docker inspect 容器/镜像
+查看容器/镜像部分信息:
+docker inspect -f=&#39;&amp;#123;&amp;#123;.NetworkSettings.IPAddress&amp;#125;&amp;#125;&#39; 容器/镜像 -f:可通过--format代替
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除容器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;删除一个容器:
+docker rm 容器名/id
+删除多个容器:
+docker rm 容器名1/id1 容器名2/id2 ...
+删除所有容器
+docker rm `docker ps -a -q` 
+PS:无法删除正在运行的容器
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看容器日志 &lt;code&gt;docker logs 容器名/id&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件拷贝&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;如果我们需要将文件拷贝到容器内可以使用cp命令
+docker cp 需要拷贝的文件或目录 容器名:容器目录
+例如:docker cp 1.txt c2:/root
+也可以将文件从容器内拷贝出来
+docker cp 容器名:容器目录 需要拷贝的文件或目录 
+例如:docker cp c2:/root/2.txt /root
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目录挂载&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;我们可以在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样我们就可以通过修改宿主
+机某个目录的文件从而去影响容器。创建容器 添加-v参数 后边为 宿主机目录:容器目录
+docker run -id --name=c4 -v /opt/:/usr/local/myhtml centos
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="计算机科学" scheme="https://crpdim.github.io/categories/computer-science/" />
+        <category term="技能学习" scheme="https://crpdim.github.io/categories/computer-science/note/" />
+        <category term="docker" scheme="https://crpdim.github.io/tags/docker/" />
+        <updated>2022-06-27T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://crpdim.github.io/computer-science/net/Net/</id>
+        <title>计算机网络体系结构</title>
+        <link rel="alternate" href="https://crpdim.github.io/computer-science/net/Net/"/>
+        <content type="html">&lt;h1 id=&#34;计算机体系结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机体系结构&#34;&gt;#&lt;/a&gt; 计算机体系结构&lt;/h1&gt;
+&lt;p&gt;计算机网络定义： 互联的自治的计算机系统集合。&lt;/p&gt;
+&lt;h3 id=&#34;计算机网络组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机网络组成&#34;&gt;#&lt;/a&gt; 计算机网络组成&lt;/h3&gt;
+&lt;p&gt;由组成成分分：硬件、软件、协议&lt;/p&gt;
+&lt;p&gt;由工作方式： 核心部分、边缘部分&lt;/p&gt;
+&lt;p&gt;由功能组成： 资源子网、通信子网&lt;/p&gt;
+&lt;h3 id=&#34;计算机网络功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机网络功能&#34;&gt;#&lt;/a&gt; 计算机网络功能：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;数据通信&lt;/li&gt;
+&lt;li&gt;资源共享&lt;/li&gt;
+&lt;li&gt;分布式处理&lt;/li&gt;
+&lt;li&gt;提高可靠性&lt;/li&gt;
+&lt;li&gt;负载均衡&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;计算机网络分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机网络分类&#34;&gt;#&lt;/a&gt; 计算机网络分类：&lt;/h3&gt;
+&lt;h4 id=&#34;按分布范围&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按分布范围&#34;&gt;#&lt;/a&gt; 按分布范围：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;广域网 WAN&lt;/li&gt;
+&lt;li&gt;城域网 MAN&lt;/li&gt;
+&lt;li&gt;局域网 LAN&lt;/li&gt;
+&lt;li&gt;个域网 PAN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;按传输技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按传输技术&#34;&gt;#&lt;/a&gt; 按传输技术：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;广播式网络&lt;/li&gt;
+&lt;li&gt;点对点网络  （分组存储转发和路由选择机制）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;按拓扑结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按拓扑结构&#34;&gt;#&lt;/a&gt; 按拓扑结构：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;总线型&lt;/li&gt;
+&lt;li&gt;星型&lt;/li&gt;
+&lt;li&gt;网状型&lt;/li&gt;
+&lt;li&gt;环形&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;按使用者&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按使用者&#34;&gt;#&lt;/a&gt; 按使用者：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;公用网&lt;/li&gt;
+&lt;li&gt;专用网&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;按交换技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按交换技术&#34;&gt;#&lt;/a&gt; 按交换技术&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;电路交换网络&lt;/li&gt;
+&lt;li&gt;报文交换网络&lt;/li&gt;
+&lt;li&gt;分组交换网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;按传输介质&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按传输介质&#34;&gt;#&lt;/a&gt; 按传输介质&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;有线： （双绞线、同轴电缆等）&lt;/li&gt;
+&lt;li&gt;无线：（微波、蓝牙、无线电等）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;性能指标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#性能指标&#34;&gt;#&lt;/a&gt; 性能指标&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;带宽：信道最高传输速率 (b/s)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;时延：数据从一端传送到另一端所需总时间&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;发送时延&lt;/li&gt;
+&lt;li&gt;传播时延&lt;/li&gt;
+&lt;li&gt;处理时延&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;时延带宽积： 发送端的第一个比特即将到达终点时，发送端已经发送了多少个比特&lt;/p&gt;
+&lt;p&gt;时延带宽积 = 传播时延 x 信道带宽&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;往返时延 RTT：发送端发送一个短分组到发送端收到来自接收端的确认（包括中间节点的处理时延、排队时延、以及转发数据的发送时延）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;吞吐量： 单位时间内通过某网络的数据量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;速率：数据传输速率、数据率、比特率 单位 (b/s)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;信道利用率： 信道有数据通过时间 ÷ (有 + 无) 数据通过时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;计算机网络分层结构与参考模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机网络分层结构与参考模型&#34;&gt;#&lt;/a&gt; 计算机网络分层结构与参考模型&lt;/h2&gt;
+&lt;h3 id=&#34;分层结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分层结构&#34;&gt;#&lt;/a&gt; 分层结构&lt;/h3&gt;
+&lt;h4 id=&#34;分层原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分层原因&#34;&gt;#&lt;/a&gt; 分层原因：&lt;/h4&gt;
+&lt;p&gt;降低协议设计和调试的复杂性、方便对网络进行研究、实现和维护&lt;/p&gt;
+&lt;h4 id=&#34;分层原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分层原则&#34;&gt;#&lt;/a&gt; 分层原则&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;每层都实现相对独立的功能，降低大系统复杂度&lt;/li&gt;
+&lt;li&gt;各层之间界面自然清晰、易于理解、相互交流少&lt;/li&gt;
+&lt;li&gt;各层功能的精确定义独立于具体实现方法、可以采用最合适的技术实现&lt;/li&gt;
+&lt;li&gt;保持下层对上层的独立性、上层单向使用下层服务&lt;/li&gt;
+&lt;li&gt;整个分层结构应能促进标准化工作&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="计算机科学" scheme="https://crpdim.github.io/categories/computer-science/" />
+        <category term="计算机网络" scheme="https://crpdim.github.io/categories/computer-science/net/" />
+        <category term="计算机网络" scheme="https://crpdim.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+        <updated>2022-06-20T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://crpdim.github.io/computer-science/net/RIP/</id>
+        <title>RIP协议</title>
+        <link rel="alternate" href="https://crpdim.github.io/computer-science/net/RIP/"/>
+        <content type="html">&lt;h1 id=&#34;rip&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rip&#34;&gt;#&lt;/a&gt; RIP&lt;/h1&gt;
+&lt;h2 id=&#34;rip-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rip-2&#34;&gt;#&lt;/a&gt; RIP&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;应用层协议，使用 UDP 传送数据，520 端口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;规定&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#规定&#34;&gt;#&lt;/a&gt; 规定&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;网络中每个路由器都要维护从自身到每个目的网络的距离纪录。&lt;/li&gt;
+&lt;li&gt;路由器到直连网络的距离为 1。&lt;/li&gt;
+&lt;li&gt;允许一条路径最多包含十五个路由器（距离为 16 表示网络不可达）。&lt;/li&gt;
+&lt;li&gt;任意两个 RIP 路由器之间每 30s 广播一次 RIP 路由信息。&lt;/li&gt;
+&lt;li&gt;不支持子网掩码的 RIP 广播。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特点&#34;&gt;#&lt;/a&gt; 特点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;仅和相邻路由器交换信息。&lt;/li&gt;
+&lt;li&gt;路由器交换的信息为自己完整的路由表。&lt;/li&gt;
+&lt;li&gt;按固定时间交换路由信息。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缺点&#34;&gt;#&lt;/a&gt; 缺点&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;限制了网络规模&lt;/li&gt;
+&lt;li&gt;路由器间交换完整地路由表，网络规模越大，开销越大&lt;/li&gt;
+&lt;li&gt;网络出现问题，会出现慢收敛情况&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;距离向量算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#距离向量算法&#34;&gt;#&lt;/a&gt; 距离向量算法&lt;/h3&gt;
+&lt;p&gt;每个路由表项目包含三个关键数据 | 目的网络 N | 距离 d | 下一跳地址 X|&lt;/p&gt;
+&lt;p&gt;对相邻的路由器发送过来的 RIP 报文：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;地址为 X 的相邻路由器发送过来的 RIP 报文，先修改报文中的所有项目，将下一条地址改为 X，把所有距离字段 + 1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对修改后的每个项目：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;原来路由表中没有目的网络 N，将该项目添加到路由表中。&lt;/li&gt;
+&lt;li&gt;原来路由表中有目的网络 N，且下一条地址为 X，则替换本地路由表项目。&lt;/li&gt;
+&lt;li&gt;原来路由表中有目的网络 N，且下一条地址不是 X，若收到的项目中距离字段小于本地路由表到该网络的距离字段，则替换原来的表项。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若超过 180s 没收到相邻路由器的更新路由表，将此相邻路由器标记位不可达。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;返回&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="计算机科学" scheme="https://crpdim.github.io/categories/computer-science/" />
+        <category term="计算机网络" scheme="https://crpdim.github.io/categories/computer-science/net/" />
+        <category term="计算机网络" scheme="https://crpdim.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+        <updated>2022-05-13T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://crpdim.github.io/computer-science/linux/Tmux/</id>
+        <title>Tmux简单使用</title>
+        <link rel="alternate" href="https://crpdim.github.io/computer-science/linux/Tmux/"/>
+        <content type="html">&lt;h1 id=&#34;tmux&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tmux&#34;&gt;#&lt;/a&gt; Tmux&lt;/h1&gt;
+&lt;h2 id=&#34;作用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#作用&#34;&gt;#&lt;/a&gt; 作用&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将窗口与会话彻底分离&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;允许在单个窗口中，同时访问多个会话。这对于同时运行多个命令行程序很有用。&lt;/li&gt;
+&lt;li&gt;可以让新窗口 &amp;quot;接入&amp;quot; 已经存在的会话。&lt;/li&gt;
+&lt;li&gt;允许每个会话有多个连接窗口，因此可以多人实时共享会话。&lt;/li&gt;
+&lt;li&gt;支持窗口任意的垂直和水平拆分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用法&#34;&gt;#&lt;/a&gt; 用法&lt;/h2&gt;
+&lt;h3 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Ubuntu 或 Debian&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ &lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;apt-get&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; tmux&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Mac&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ brew &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; tmux&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动&#34;&gt;#&lt;/a&gt; 启动&lt;/h3&gt;
+&lt;p&gt;输入 tmux 启动 Tmux 窗口&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://github.com/Crpdim/crpdim.github.io/raw/main/tmux_1.png&#34; alt=&#34;uTools_1665966015180&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;退出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出&#34;&gt;#&lt;/a&gt; 退出&lt;/h3&gt;
+&lt;p&gt;ctrl+d 或者输入 exit 命令就能退出 Tmux 窗口&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ &lt;span class=&#34;token builtin class-name&#34;&gt;exit&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;会话管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#会话管理&#34;&gt;#&lt;/a&gt; 会话管理&lt;/h2&gt;
+&lt;p&gt;直接使用 &lt;code&gt; tmux&lt;/code&gt;  命令建立新会话，窗口名称会从 0 依次往后增加，使用编号区分会话不直观，可以直接用以下命令为会话取名&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux new &lt;span class=&#34;token parameter variable&#34;&gt;-s&lt;/span&gt; session_name&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;会话分离&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#会话分离&#34;&gt;#&lt;/a&gt; 会话分离&lt;/h3&gt;
+&lt;p&gt;在 Tmux 窗口中，按下 &lt;code&gt;Ctrl+b d&lt;/code&gt;  或者输入 &lt;code&gt;tmux detach&lt;/code&gt;  命令，就会将当前会话与窗口分离。&lt;/p&gt;
+&lt;p&gt;被分离的会话和里面的进程会在后台执行，使用 &lt;code&gt;tmux ls&lt;/code&gt;  命令可以查看所有 tmux 会话&lt;/p&gt;
+&lt;h3 id=&#34;会话接入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#会话接入&#34;&gt;#&lt;/a&gt; 会话接入&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;tmux attach&lt;/code&gt;  命令用于重新接入某个已存在的会话。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用会话编号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux attach &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用会话名称&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux attach &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; session-name&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;会话杀死&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#会话杀死&#34;&gt;#&lt;/a&gt; 会话杀死&lt;/h3&gt;
+&lt;p&gt;在 Tmux 窗口中，按下 &lt;code&gt;Ctrl+b x&lt;/code&gt;  或 &lt;code&gt;Ctrl+d&lt;/code&gt;  可以杀死当前会话&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;tmux kill-session&lt;/code&gt;  命令用于杀死某个会话。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用会话编号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux kill-session &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用会话名称&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux kill-session &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;session-name&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;会话切换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#会话切换&#34;&gt;#&lt;/a&gt; 会话切换&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;tmux switch&lt;/code&gt;  命令用于切换会话。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用会话编号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux switch &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用会话名称&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux switch &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;session-name&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;会话重命名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#会话重命名&#34;&gt;#&lt;/a&gt; 会话重命名&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;tmux rename-session&lt;/code&gt;  命令用于重命名会话。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux rename-session &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; new_name&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;窗格管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#窗格管理&#34;&gt;#&lt;/a&gt; 窗格管理&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux split-window&lt;/code&gt;  命令用来划分窗格。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 划分上下两个窗格&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux split-window&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 划分左右两个窗格&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux split-window &lt;span class=&#34;token parameter variable&#34;&gt;-h&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Crpdim/crpdim.github.io/raw/main/tmux_2.png&#34; alt=&#34;image-20221017084655134&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;移动光标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#移动光标&#34;&gt;#&lt;/a&gt; 移动光标&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux select-pane&lt;/code&gt;  命令用来移动光标位置。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 光标切换到上方窗格&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux select-pane &lt;span class=&#34;token parameter variable&#34;&gt;-U&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 光标切换到下方窗格&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux select-pane &lt;span class=&#34;token parameter variable&#34;&gt;-D&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 光标切换到左边窗格&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux select-pane &lt;span class=&#34;token parameter variable&#34;&gt;-L&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 光标切换到右边窗格&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux select-pane &lt;span class=&#34;token parameter variable&#34;&gt;-R&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;交换窗格位置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#交换窗格位置&#34;&gt;#&lt;/a&gt; 交换窗格位置&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux swap-pane&lt;/code&gt;  命令用来交换窗格位置。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 当前窗格上移&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux swap-pane &lt;span class=&#34;token parameter variable&#34;&gt;-U&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 当前窗格下移&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ tmux swap-pane &lt;span class=&#34;token parameter variable&#34;&gt;-D&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;其余快捷键&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其余快捷键&#34;&gt;#&lt;/a&gt; 其余快捷键&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;Ctrl+b ?&lt;/code&gt;  快捷键可以获取所有 tmux 快捷键&lt;/p&gt;
+</content>
+        <category term="计算机科学" scheme="https://crpdim.github.io/categories/computer-science/" />
+        <category term="Linux学习" scheme="https://crpdim.github.io/categories/computer-science/linux/" />
+        <category term="linux" scheme="https://crpdim.github.io/tags/linux/" />
+        <updated>2022-04-12T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://crpdim.github.io/computer-science/programming-language/cpp/week-1/</id>
+        <title>第1周 计算</title>
+        <link rel="alternate" href="https://crpdim.github.io/computer-science/programming-language/cpp/week-1/"/>
+        <content type="html">&lt;h1 id=&#34;c-day-01&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c-day-01&#34;&gt;#&lt;/a&gt; C++ Day-01&lt;/h1&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;span&gt;scanner&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hello world!&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="计算机科学" scheme="https://crpdim.github.io/categories/computer-science/" />
+        <category term="编程语言" scheme="https://crpdim.github.io/categories/computer-science/programming-language/" />
+        <category term="C++" scheme="https://crpdim.github.io/categories/computer-science/programming-language/cpp/" />
+        <category term="C++" scheme="https://crpdim.github.io/tags/C/" />
+        <updated>2020-04-12T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://crpdim.github.io/%E6%A8%A1%E7%89%88/</id>
+        <title>blog模版</title>
+        <link rel="alternate" href="https://crpdim.github.io/%E6%A8%A1%E7%89%88/"/>
+        <content type="html">&lt;h1 id=&#34;hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hello&#34;&gt;#&lt;/a&gt; Hello&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/photo-(1).jpg&#34; alt=&#34;photo-(1)&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="blog模版" scheme="https://crpdim.github.io/tags/blog%E6%A8%A1%E7%89%88/" />
+        <updated>2019-07-25T08:43:00.000Z</updated>
+    </entry>
+</feed>
