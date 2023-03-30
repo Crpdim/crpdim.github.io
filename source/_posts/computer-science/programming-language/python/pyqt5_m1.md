@@ -45,7 +45,7 @@ cp -r /opt/homebrew/Cellar/pyqt@5/5.15.7_2/lib/python3.9/site-packages/. /opt/ho
 
 ## 4. 检查是否能正常使用
 
-`import PyQt5`没发生异常则表示能 !! 正常使用!!
+`import PyQt5`没发生异常则表示能 !!正常使用!!
 [:heavy_check_mark:success]{.label .success}
 
 :::success
