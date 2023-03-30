@@ -5,7 +5,6 @@ categories:
 - [计算机科学, 编程语言, Python]
 tags: Python
 cover: assets/pexels-02.jpg
-
 ---
 
 # M1安装pyqt5
@@ -46,7 +45,15 @@ cp -r /opt/homebrew/Cellar/pyqt@5/5.15.7_2/lib/python3.9/site-packages/. /opt/ho
 
 ## 4. 检查是否能正常使用
 
-`import PyQt5`没发生异常则表示能正常使用
+`import PyQt5`没发生异常则表示能 !! 正常使用!!
+[:heavy_check_mark:success]{.label .success}
+
+:::success
+成功啦
+:::
+
+- [x] 红叉叉
+
 
 ```bash
 (MyEnv) crpdim@MyComputer ~ %python

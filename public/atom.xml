@@ -8,8 +8,98 @@
     <author>
       <name>Jesper</name>
     </author>
-    <updated>2022-09-20T12:46:25.000Z</updated>
+    <updated>2023-03-28T16:00:00.000Z</updated>
     <category term="吼吼吼" />
+    <entry>
+        <id>https://crpdim.github.io/ai/machine-learning/machine_course01/</id>
+        <title>机器学习课程01-课程内容大纲</title>
+        <link rel="alternate" href="https://crpdim.github.io/ai/machine-learning/machine_course01/"/>
+        <content type="html">&lt;h1 id=&#34;机器学习课程01&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习课程01&#34;&gt;#&lt;/a&gt; 机器学习课程 01&lt;/h1&gt;
+&lt;h2 id=&#34;机器学习机器帮忙找函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习机器帮忙找函数&#34;&gt;#&lt;/a&gt; 机器学习 = 机器帮忙找函数&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;机器学习目的： 写一个人类写不出的复杂函数，实现人类想要的功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声音转文字： 输入音频信号，机器帮忙找到一个函数将音频信号转换为文字&lt;/li&gt;
+&lt;li&gt;图片识别： 输入图片，机器帮忙找到一个函数将图片转换为文字&lt;/li&gt;
+&lt;li&gt;AlphaGo： 输入棋盘黑白子位置，机器帮忙找到一个函数输出下一步落子位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;深度学习： 机器学习找的函数是一个类神经网络&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;输入与输出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#输入与输出&#34;&gt;#&lt;/a&gt; 输入与输出&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;机器学习的输入输出形式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;输入形式有：序列 (Sequence)、向量 (Vector)、矩阵 (Matrix)&lt;/li&gt;
+&lt;li&gt;输出形式有：数值 (Regression)、类别 (Classification)、文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;如何训练机器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何训练机器&#34;&gt;#&lt;/a&gt; 如何训练机器&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;怎样让机器分辨宝可梦和数码宝贝？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;训练步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#训练步骤&#34;&gt;#&lt;/a&gt; 训练步骤&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;收集训练数据：收集很多数码宝贝和宝可梦的图片&lt;/li&gt;
+&lt;li&gt;标注数据类型：标注图片的 label&lt;/li&gt;
+&lt;li&gt;将&lt;ins&gt;输入与对应的 label&lt;/ins&gt; 交给机器：让机器自己找出能分辨数码宝贝和宝可梦的函数（输入精灵图片，输出类别）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;self-supervised-learning&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#self-supervised-learning&#34;&gt;#&lt;/a&gt; Self-supervised Learning&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;收集数据会花费大量时间，且有很多相似但不同的任务怎么办？如：识别宝可梦和数码宝贝与识别猫和狗。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在训练之前练就基本功：(Pre-train) 即基本模型，就可以在这基础上很快适应其他任务。&lt;/p&gt;
+&lt;h3 id=&#34;generative-adversarial-network&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generative-adversarial-network&#34;&gt;#&lt;/a&gt; Generative Adversarial Network&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;生成对抗网络，让机器自己学习生成数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;只需要收集大量输入与大量输出，输入与输出之间&lt;ins&gt;不需要成对的关系&lt;/ins&gt;，机器就能自动找出对应关系。&lt;/p&gt;
+&lt;h3 id=&#34;reinforcement-learning&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#reinforcement-learning&#34;&gt;#&lt;/a&gt; Reinforcement Learning&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;强化学习，让机器自己学习做任务&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;机器学习的另一种方式，不需要输入与输出，只需要输入与奖励，机器就能自动找出对应关系。&lt;/p&gt;
+&lt;h2 id=&#34;异常检测-anomaly-detection&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#异常检测-anomaly-detection&#34;&gt;#&lt;/a&gt; 异常检测 Anomaly Detection&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;让机器可以回答 “我不知道”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如：训练出了一个宝可梦跟数码宝贝的分类器，但是给了它一张恐龙的图片，它可以说不知道。&lt;/p&gt;
+&lt;h2 id=&#34;explainable-ai&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#explainable-ai&#34;&gt;#&lt;/a&gt; Explainable AI&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;让机器不仅可以回答正确答案，还可以回答为什么&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给模型大量图片，让它解释图片中哪些地方是重要的。&lt;/p&gt;
+&lt;h2 id=&#34;模型攻击-model-attack&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模型攻击-model-attack&#34;&gt;#&lt;/a&gt; 模型攻击 Model Attack&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人类对模型的攻击&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如：让机器学习识别猫，给它一张猫的图片，但是在图片中加入一些噪声，让机器识别不出来。&lt;/p&gt;
+&lt;h2 id=&#34;network-compression&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#network-compression&#34;&gt;#&lt;/a&gt; Network Compression&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;让模型更小，更快&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一个巨大的模型很难在正常设备中运行，通过很多技术让模型变小，让这些模型可以在常见设备中运行。&lt;/p&gt;
+&lt;h2 id=&#34;life-long-learning&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#life-long-learning&#34;&gt;#&lt;/a&gt; Life-Long Learning&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;让机器不断学习，及将机器训练成天网所面临的挑战&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;meta-learning&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#meta-learning&#34;&gt;#&lt;/a&gt; Meta Learning&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;让机器学习 &amp;quot;&lt;ins&gt; 如何学习&lt;/ins&gt; &amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;让机器从大量任务中发明新的算法，从过往经验学习新的算法&lt;/p&gt;
+&lt;h3 id=&#34;few-shot-learning&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#few-shot-learning&#34;&gt;#&lt;/a&gt; Few-Shot Learning&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用少量的标注资料学习&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="人工智能" scheme="https://crpdim.github.io/categories/ai/" />
+        <category term="机器学习" scheme="https://crpdim.github.io/categories/ai/machine-learning/" />
+        <category term="机器学习" scheme="https://crpdim.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+        <updated>2023-03-28T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://crpdim.github.io/computer-science/programming-language/python/pyqt5_m1/</id>
         <title>M1安装pyqt5</title>
@@ -24,7 +114,14 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;brew list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;2-找到刚安装的pyqt5的库文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-找到刚安装的pyqt5的库文件&#34;&gt;#&lt;/a&gt; 2. 找到刚安装的 pyqt5 的库文件&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 库文件所在位置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;/opt/homebrew/Cellar/pyqt@5/5.15.7_2/lib/python3.9/site-packages&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;3-将site-packages中的文件复制到python环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-将site-packages中的文件复制到python环境&#34;&gt;#&lt;/a&gt; 3. 将 site-packages 中的文件复制到 python 环境&lt;/h2&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;#我使用 miniforge 创建的 python 虚拟环境所在位置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;/Users/crpdim/miniforge3/envs/MyEnv/lib/python3.9/site-packages&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;使用cp命令将pyqt5库文件复制到python环境&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-r&lt;/span&gt; /opt/homebrew/Cellar/pyqt@5/5.15.7_2/lib/python3.9/site-packages/. /opt/homebrew/Cellar/pyqt@5/5.15.7_2/lib/python3.9/site-packages&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;4-检查是否能正常使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-检查是否能正常使用&#34;&gt;#&lt;/a&gt; 4. 检查是否能正常使用&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;import PyQt5&lt;/code&gt;  没发生异常则表示能正常使用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;import PyQt5&lt;/code&gt;  没发生异常则表示能！！正常使用！！&lt;br /&gt;
+&lt;span class=&#34;label success&#34;&gt;✔️success&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;note success&#34;&gt;
+&lt;p&gt;成功啦&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; 红叉叉&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;MyEnv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; crpdim@MyComputer ~ %python&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Python &lt;span class=&#34;token number&#34;&gt;3.9&lt;/span&gt;.16 &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;main, Mar  &lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2023&lt;/span&gt;, 04:29:24&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;Clang &lt;span class=&#34;token number&#34;&gt;14.0&lt;/span&gt;.6 &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; :: Anaconda, Inc. on darwin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Type &lt;span class=&#34;token string&#34;&gt;&#34;help&#34;&lt;/span&gt;, &lt;span class=&#34;token string&#34;&gt;&#34;copyright&#34;&lt;/span&gt;, &lt;span class=&#34;token string&#34;&gt;&#34;credits&#34;&lt;/span&gt; or &lt;span class=&#34;token string&#34;&gt;&#34;license&#34;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;more&lt;/span&gt; information.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;import&lt;/span&gt; PyQt5&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
         <category term="计算机科学" scheme="https://crpdim.github.io/categories/computer-science/" />
         <category term="编程语言" scheme="https://crpdim.github.io/categories/computer-science/programming-language/" />
@@ -33,9 +130,9 @@
         <updated>2022-09-20T12:46:25.000Z</updated>
     </entry>
     <entry>
-        <id>https://crpdim.github.io/computer-science/note/docker/</id>
+        <id>https://crpdim.github.io/note/docker/</id>
         <title>Docker学习</title>
-        <link rel="alternate" href="https://crpdim.github.io/computer-science/note/docker/"/>
+        <link rel="alternate" href="https://crpdim.github.io/note/docker/"/>
         <content type="html">&lt;h1 id=&#34;docker&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#docker&#34;&gt;#&lt;/a&gt; Docker&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;将硬件资源比作开发商拥有的一块地，那么物理机就可以看作一栋别墅，而虚拟机则可以看做楼房，容器的作用则相当于在房间中进行隔断，可以最大化利用资源。&lt;/p&gt;
@@ -100,87 +197,37 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;删除镜像&lt;/p&gt;
-&lt;figure class=&#34;highlight dockerfile&#34;&gt;&lt;figcaption data-lang=&#34;Docker&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;1、删除一个镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docker rmi 镜像名/id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2、删除多个镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docker rmi 镜像名1/id1 镜像名2/id2 ...&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;3、删除所有镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;docker rmi `docker images -q`&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;、删除一个镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; rmi 镜像名/id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;、删除多个镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; rmi 镜像名1/id1 镜像名2/id2 &lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;、删除所有镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; rmi &lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; images &lt;span class=&#34;token parameter variable&#34;&gt;-q&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;创建容器&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker run [options] image command [ARG...] 
-创建交互式容器（exit 容器停止）
-docker run -i -t --name=c1 centos/bin/bash
-创建守护式容器（exit 容器不停止）
-docker run -d --name=c2 centos/bin/bash
-options选项: -i、-t、-d、--name
--i:交互式容器
--t:tty，终端(分配一个终端，操作容器)
---name：指定容器名称
--d:后台运行，并且打印容器id
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; image &lt;span class=&#34;token builtin class-name&#34;&gt;command&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;ARG&lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;.&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;创建交互式容器（exit 容器停止）&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;c1 centos/bin/bash&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;创建守护式容器（exit 容器不停止）&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;c2 centos/bin/bash&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;options选项: -i、-t、-d、--name&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-i:交互式容器&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-t:tty，终端&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;分配一个终端，操作容器&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--name：指定容器名称&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-d:后台运行，并且打印容器id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;进入容器&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;方式一:
-docker attach 容器名称/id  (ps:exit,容器停止)
-eg:docker attach u3
-方式二:
-docker exec -it 容器名称/id /bin/bash (ps:exit,容器不会停止)
-eg:docker exec -it u3 /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;方式一:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; attach 容器名称/id  &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;ps:exit,容器停止&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;eg:docker attach u3&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;方式二:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-it&lt;/span&gt; 容器名称/id /bin/bash &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;ps:exit,容器不会停止&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;eg:docker &lt;span class=&#34;token builtin class-name&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-it&lt;/span&gt; u3 /bin/bash&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;查看容器&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker ps:查看正在运行的容器
-docker ps -a:查看运行过的容器(历史) 
-docker ps -l:最后一次运行的容器
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; ps:查看正在运行的容器&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;ps&lt;/span&gt; -a:查看运行过的容器&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;历史&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;ps&lt;/span&gt; -l:最后一次运行的容器&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;启动 / 停止容器&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker start 容器名称/id 
-docker stop 容器名称/id
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; start 容器名称/id &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; stop 容器名称/id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;获取容器 / 镜像元数据&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;查看容器/镜像全部信息: 
-docker inspect 容器/镜像
-查看容器/镜像部分信息:
-docker inspect -f=&#39;&amp;#123;&amp;#123;.NetworkSettings.IPAddress&amp;#125;&amp;#125;&#39; 容器/镜像 -f:可通过--format代替
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;查看容器/镜像全部信息: &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; inspect 容器/镜像&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;删除容器&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;删除一个容器:
-docker rm 容器名/id
-删除多个容器:
-docker rm 容器名1/id1 容器名2/id2 ...
-删除所有容器
-docker rm `docker ps -a -q` 
-PS:无法删除正在运行的容器
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;删除一个容器:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; 容器名/id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;删除多个容器:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; 容器名1/id1 容器名2/id2 &lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;删除所有容器&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;ps&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-a&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-q&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;PS:无法删除正在运行的容器&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;查看容器日志 &lt;code&gt;docker logs 容器名/id&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;文件拷贝&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;如果我们需要将文件拷贝到容器内可以使用cp命令
-docker cp 需要拷贝的文件或目录 容器名:容器目录
-例如:docker cp 1.txt c2:/root
-也可以将文件从容器内拷贝出来
-docker cp 容器名:容器目录 需要拷贝的文件或目录 
-例如:docker cp c2:/root/2.txt /root
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;如果我们需要将文件拷贝到容器内可以使用cp命令&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; 需要拷贝的文件或目录 容器名:容器目录&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;例如:docker &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;.txt c2:/root&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;也可以将文件从容器内拷贝出来&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; 容器名:容器目录 需要拷贝的文件或目录 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;例如:docker &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; c2:/root/2.txt /root&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;目录挂载&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;我们可以在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样我们就可以通过修改宿主
-机某个目录的文件从而去影响容器。创建容器 添加-v参数 后边为 宿主机目录:容器目录
-docker run -id --name=c4 -v /opt/:/usr/local/myhtml centos
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;我们可以在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样我们就可以通过修改宿主&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;机某个目录的文件从而去影响容器。创建容器 添加-v参数 后边为 宿主机目录:容器目录&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-id&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;c4 &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /opt/:/usr/local/myhtml centos&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="计算机科学" scheme="https://crpdim.github.io/categories/computer-science/" />
-        <category term="技能学习" scheme="https://crpdim.github.io/categories/computer-science/note/" />
+        <category term="技能学习" scheme="https://crpdim.github.io/categories/note/" />
         <category term="docker" scheme="https://crpdim.github.io/tags/docker/" />
         <updated>2022-06-27T12:46:25.000Z</updated>
     </entry>
@@ -410,7 +457,7 @@ docker run -id --name=c4 -v /opt/:/usr/local/myhtml centos
     </entry>
     <entry>
         <id>https://crpdim.github.io/computer-science/programming-language/cpp/week-1/</id>
-        <title>第1周 计算</title>
+        <title>001Test</title>
         <link rel="alternate" href="https://crpdim.github.io/computer-science/programming-language/cpp/week-1/"/>
         <content type="html">&lt;h1 id=&#34;c-day-01&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c-day-01&#34;&gt;#&lt;/a&gt; C++ Day-01&lt;/h1&gt;
 &lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;span&gt;scanner&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;hello world!&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
@@ -425,7 +472,71 @@ docker run -id --name=c4 -v /opt/:/usr/local/myhtml centos
         <title>blog模版</title>
         <link rel="alternate" href="https://crpdim.github.io/%E6%A8%A1%E7%89%88/"/>
         <content type="html">&lt;h1 id=&#34;hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hello&#34;&gt;#&lt;/a&gt; Hello&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;好奇心害死猫&#34;&gt;balabala&lt;/span&gt;&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;默认默认 这里是一段文字&lt;/summary&gt;&lt;div&gt;
+&lt;p&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; 红叉叉&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note danger&#34;&gt;
+&lt;p&gt;危险 危险&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;span class=&#34;rainbow&#34;&gt;赤橙黄绿青蓝紫&lt;/span&gt;&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;内容 里面有图片题目&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;&lt;img data-src=&#34;/assets/photo-(1).jpg&#34; alt=&#34;photo-(1)&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li class=&#34;quiz true&#34;&gt;编译时多态主要指运算符重载与函数重载，而运行时多态主要指虚函数。&lt;/li&gt;
+&lt;li class=&#34;quiz multi&#34;&gt;有基类  &lt;code&gt;SHAPE&lt;/code&gt; ，派生类  &lt;code&gt;CIRCLE&lt;/code&gt; ，声明如下变量： &lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SHAPE shape1&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;p1&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;CIRCLE circle1&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;q1&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;下列哪些项是 “派生类对象替换基类对象”。
+&lt;ul class=&#34;options&#34;&gt;
+&lt;li class=&#34;correct&#34;&gt;&lt;code&gt;p1=&amp;amp;circle1;&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q1=&amp;amp;shape1;&lt;/code&gt;&lt;/li&gt;
+&lt;li class=&#34;correct&#34;&gt;&lt;code&gt;shape1=circle1;&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;circle1=shape1;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul class=&#34;options&#34;&gt;
+&lt;li&gt;✔️ 令基类对象的指针指向派生类对象&lt;/li&gt;
+&lt;li&gt;❌ 派生类指针指向基类的引用&lt;/li&gt;
+&lt;li&gt;✔️ 派生类对象给基类对象赋值&lt;/li&gt;
+&lt;li&gt;❌ 基类对象给派生类对象赋值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li class=&#34;quiz&#34;&gt;下列叙述正确的是 &lt;span class=&#34;gap&#34;&gt;&lt;/span&gt; 。
+&lt;ul class=&#34;options&#34;&gt;
+&lt;li&gt;虚函数只能定义成无参函数&lt;/li&gt;
+&lt;li&gt;虚函数不能有返回值&lt;/li&gt;
+&lt;li&gt;能定义虚构造函数&lt;/li&gt;
+&lt;li class=&#34;correct&#34;&gt;A、B、C 都不对&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li class=&#34;quiz fill&#34;&gt;如定义  &lt;code&gt;int e=8; double f=6.4, g=8.9;&lt;/code&gt; ，则表达式  &lt;code&gt;f+int (e/3*int (f+g)/2)%4&lt;/code&gt;  的值为 &lt;span class=&#34;gap&#34;&gt;9.4&lt;/span&gt;。
+&lt;blockquote&gt;
+&lt;p&gt;注意运算顺序和数据类型&lt;br /&gt;
+&lt;span class=&#34;mistake&#34;&gt; 8.4&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;Jasper&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://crpdim.github.io/&#34; class=&#34;image&#34; data-background-image=&#34;/images/avatar.jpg&#34;&gt;&lt;/a&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;a href=&#34;https://crpdim.github.io/&#34; class=&#34;title&#34;&gt;你好呀&lt;/a&gt;
+          &lt;p class=&#34;desc&#34;&gt;Jasper&#39;s Blog&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;media-container&#34;&gt;&lt;div class=&#34;player&#34; data-type=&#34;audio&#34; data-src=&#39;[{&#34;title&#34;:&#34;列表1&#34;,&#34;list&#34;:[&#34;https://music.163.com/#/playlist?id=3072883579&#34;,&#34;https://music.163.com/#/playlist?id=360062344&#34;]},{&#34;title&#34;:&#34;列表2&#34;,&#34;list&#34;:[&#34;https://music.163.com/#/playlist?id=8168775473&#34;]}]&#39;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;details class=&#34;info&#34;&gt;&lt;summary&gt;蓝色&lt;/summary&gt;&lt;div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;②号标签卡片 1&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;这里是卡片 1 的内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;②号标签卡片 2&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;这里是卡片 2 的内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;/div&gt;&lt;/details&gt;
 </content>
         <category term="blog模版" scheme="https://crpdim.github.io/tags/blog%E6%A8%A1%E7%89%88/" />
         <updated>2019-07-25T08:43:00.000Z</updated>

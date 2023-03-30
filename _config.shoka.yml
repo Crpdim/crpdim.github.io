@@ -60,20 +60,50 @@ sidebar:
 
 # Comments
 # Valine
-# For more information: https://valine.js.org, https://github.com/xCss/Valine
+For more information: https://valine.js.org, https://github.com/xCss/Valine
 # valine:
-#   appId: NjKaaL3Ypwivyw0cfqVn4anV-gzGzoHsz
-#   appKey: qwMI9IL0gdYXmXy5bDfa5Jml
+#   appId: H1fwnZX7tWRdz9wveg9ryaIg-gzGzoHsz
+#   appKey: WUdgPmu2p7VTJ58eB5d5r5oz
 #   placeholder: ヽ(○´∀`)ﾉ♪ # Comment box placeholder
 #   pageSize: 10 # Pagination size
 #   lang: zh-CN
 #   tagMember:
 #     master:
-#       # - deea5a8d259d17182a53be1772e4c182
+#       - deea5a8d259d17182a53be1772e4c182
 #     friend:
-#       # - deea5a8d259d17182a53be1772e4c182
+#       - deea5a8d259d17182a53be1772e4c182
 
-# bgm
+valine:
+  appId: H1fwnZX7tWRdz9wveg9ryaIg-gzGzoHsz
+  appKey: WUdgPmu2p7VTJ58eB5d5r5oz
+  placeholder: ヽ(○´∀`)ﾉ♪ # Comment box placeholder
+  avatar: mp # Gravatar style : mp, identicon, monsterid, wavatar, robohash, retro
+  pageSize: 10 # Pagination size
+  lang: zh-CN
+  visitor: true # Article reading statistic
+  NoRecordIP: false # Whether to record the commenter IP
+  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  powerMode: true
+  tagMeta:
+    visitor: 新朋友
+    master: 老大
+    friend: 小伙伴
+    investor: 金主
+  tagColor:
+    master: "var(--color-orange)"
+    friend: "var(--color-aqua)"
+    investor: "var(--color-pink)"
+  tagMember:
+    master:
+      # - hash of master@email.com
+      # - hash of master2@email.com
+    friend:
+      # - hash of friend@email.com
+      # - hash of friend2@email.com
+    investor:
+      # - hash of investor1@email.com
+
+# bgm 
 # audio:
 #    - title: 列表1
 #       list:
@@ -96,3 +126,4 @@ disable_baidu_transformation: true
 
 # Automatically add external URL with Base64 encrypt & decrypt.
 exturl: true
+

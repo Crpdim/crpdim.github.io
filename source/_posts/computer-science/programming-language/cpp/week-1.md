@@ -1,5 +1,5 @@
 ---
-title: 第1周 计算
+title: 001Test
 date: 2020/04/12 20:46:25
 categories:
 - [计算机科学, 编程语言, C++]
@@ -16,4 +16,3 @@ int main() {
   cout << "hello world!" << endl;
 }
 ```
-

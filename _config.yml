@@ -54,6 +54,9 @@ default_category: uncategorized
 category_map: # edit for Theme.shoka
   编程语言: programming-language
   计算机科学: computer-science
+  机器学习: machine-learning
+  深度学习: deep-learning
+  人工智能: ai
   C++: cpp
   Python: python
   Java: java
@@ -153,20 +156,20 @@ minify:
     exclude:
       - '**/*.min.js'
 
-# algolia:
-#   appId:
-#   apiKey:
-#   adminApiKey:
-#   chunkSize: 5000
-#   indexName:
-#   fields:
-#     - title #必须配置
-#     - path #必须配置
-#     - categories #推荐配置
-#     - content:strip:truncate,0,4000
-#     - gallery
-#     - photos
-#     - tags
+algolia:
+  appId: ZOP8NADNU6
+  apiKey: 1af52f1df297682a29ed0c4bf7e0aecd
+  adminApiKey: d6a01fbfc78c629be9f937635d0c0ea9
+  chunkSize: 5000
+  indexName: blog_Jasper
+  fields:
+    - title #必须配置
+    - path #必须配置
+    - categories #推荐配置
+    - content:strip:truncate,0,4000
+    - gallery
+    - photos
+    - tags
 
 feed:
     limit: 20

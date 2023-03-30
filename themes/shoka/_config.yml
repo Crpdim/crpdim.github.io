@@ -184,21 +184,21 @@ creative_commons:
 # Valine
 # For more information: https://github.com/amehime/MiniValine
 valine:
-  appId: NjKaaL3Ypwivyw0cfqVn4anV-gzGzoHsz
-  appKey: qwMI9IL0gdYXmXy5bDfa5Jml
+  appId: H1fwnZX7tWRdz9wveg9ryaIg-gzGzoHsz
+  appKey: WUdgPmu2p7VTJ58eB5d5r5oz
   placeholder: ヽ(○´∀`)ﾉ♪ # Comment box placeholder
   avatar: mp # Gravatar style : mp, identicon, monsterid, wavatar, robohash, retro
   pageSize: 10 # Pagination size
-  lang: en
+  lang: zh-CN
   visitor: true # Article reading statistic
   NoRecordIP: false # Whether to record the commenter IP
   serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
   powerMode: true
   tagMeta:
     visitor: 新朋友
-    master: 主人
+    master: 老大
     friend: 小伙伴
-    investor: 金主粑粑
+    investor: 金主
   tagColor:
     master: "var(--color-orange)"
     friend: "var(--color-aqua)"
@@ -233,13 +233,13 @@ search:
   enable: true
   hits:
     per_page: 10
-#     labels:
-#     input_placeholder: Search for Posts
-#     hits_empty: “我们没有找到任何搜索结果: ${query}”
-#     hits_stats: “找到${hits}条结果（用时${time} ms）”
+    labels:
+    input_placeholder: Search for Posts
+    hits_empty: “我们没有找到任何搜索结果 ${query} ”
+    hits_stats: “找到${hits}条结果（用时${time} ms）”
 
 # Dependencies: https://github.com/amehime/hexo-renderer-multi-markdown-it
-pangu: false
+pangu: true
 
 # Quicklink Support
 # For more information: https://github.com/GoogleChromeLabs/quicklink
