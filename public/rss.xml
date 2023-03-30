@@ -10,9 +10,88 @@
         </author>
         <description>A good boy!</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 29 Mar 2023 00:00:00 +0800</pubDate>
-        <lastBuildDate>Wed, 29 Mar 2023 00:00:00 +0800</lastBuildDate>
+        <pubDate>Thu, 30 Mar 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Thu, 30 Mar 2023 00:00:00 +0800</lastBuildDate>
         <category term="吼吼吼" />
+        <item>
+            <guid isPermalink="true">https://crpdim.github.io/ai/machine-learning/machine_course02/</guid>
+            <title>机器学习课程02-浅谈机器学习原理</title>
+            <link>https://crpdim.github.io/ai/machine-learning/machine_course02/</link>
+            <category term="人工智能" scheme="https://crpdim.github.io/categories/ai/" />
+            <category term="机器学习" scheme="https://crpdim.github.io/categories/ai/machine-learning/" />
+            <category term="机器学习" scheme="https://crpdim.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+            <pubDate>Thu, 30 Mar 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;宝可梦与数码宝贝的分类器-浅谈机器学习原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#宝可梦与数码宝贝的分类器-浅谈机器学习原理&#34;&gt;#&lt;/a&gt; 宝可梦与数码宝贝的分类器 - 浅谈机器学习原理&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目的：找到一个函数可以分辨宝可梦与数码宝贝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;对数据观察&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对数据观察&#34;&gt;#&lt;/a&gt; 对数据观察&lt;/h2&gt;
+&lt;h3 id=&#34;根据画风差异&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#根据画风差异&#34;&gt;#&lt;/a&gt; 根据画风差异&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;分析线条的复杂程度（数码宝贝较复杂， 宝可梦较简单）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提取图片中的边缘线&lt;/li&gt;
+&lt;li&gt;得到边缘线像素点的数量&lt;/li&gt;
+&lt;li&gt;边缘像素点的数量就代表边缘的复杂程度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据此生成一个函数，函数中有一未知参数 h。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;输入精灵图片，分析线条复杂程度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若复杂程度超过一个特定的值 h，归为数码宝贝&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若复杂程度小于特定值 h， 归为宝可梦&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将 h 所有的可能性集合起来，得到 H={1，2，……，10000}  &lt;span class=&#34;spoiler&#34; title=&#34;好奇心害死猫&#34;&gt;h 可能是 1，2……&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;H 内可能的 h 的数量即模型的&lt;ins&gt;复杂程度&lt;/ins&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;损失函数-loss&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#损失函数-loss&#34;&gt;#&lt;/a&gt; 损失函数 Loss&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;给出一个数据集，数据集中有&lt;ins&gt;成对&lt;/ins&gt;的输入 x&amp;lt;sub&amp;gt;n&amp;lt;/sub &amp;gt; 与输出 y&amp;lt;sub&amp;gt;n&amp;lt;/sub&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;x&amp;lt;sub&amp;gt;n&amp;lt;/sub &amp;gt; 即数据集中精灵的图片&lt;/li&gt;
+&lt;li&gt;y&amp;lt;sub&amp;gt;n&amp;lt;/sub &amp;gt; 即数据集中 x&amp;lt;sub&amp;gt;n&amp;lt;/sub &amp;gt; 对应的精灵的类别 label&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据数据集求损失值 L&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;根据每一对数据算得一个单个损失值 l&amp;lt;sub&amp;gt;n&amp;lt;/sub&amp;gt;&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;求单个损失值方法&lt;/summary&gt;&lt;div&gt;
+&lt;p&gt;在此有很多解决办法，最简单直观的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若将 x&amp;lt;sub&amp;gt;n&amp;lt;/sub &amp;gt; 输入到函数中，得到相应的 y&amp;lt;sub&amp;gt;n&amp;lt;/sub&amp;gt;，l&amp;lt;sub&amp;gt;n&amp;lt;/sub &amp;gt; 为 1&lt;/li&gt;
+&lt;li&gt;若得到的结果不匹配，l&amp;lt;sub&amp;gt;n&amp;lt;/sub &amp;gt; 为 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将所有组得到的 l 求和取平均获取最终损失值 L&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;训练样例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#训练样例&#34;&gt;#&lt;/a&gt; 训练样例&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果收集所有的宝可梦和数码宝贝的图片作数据集 D&amp;lt;sub&amp;gt;all&amp;lt;/sub&amp;gt; ，就能得到最好的 h&amp;lt;sup&amp;gt;all&amp;lt;/sup&amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;h&amp;lt;sup&amp;gt;all&amp;lt;/sup&amp;gt; = arg min L(h, D&amp;lt;sub&amp;gt;all&amp;lt;/sub&amp;gt;)&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://crpdim.github.io/ai/machine-learning/machine_course01/</guid>
             <title>机器学习课程01-课程内容大纲</title>
