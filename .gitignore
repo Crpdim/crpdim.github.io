@@ -2,5 +2,4 @@
 db.json
 .deploy_git/
 node_modules/
-public/
 .git
