@@ -93,7 +93,7 @@ theme: shoka # edit for Theme.shoka
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/Crpdim/crpdim.github.io.git
+  repo: git@github.com:Crpdim/crpdim.github.io.git
   branch: main
 
 # edit for Theme.shoka
