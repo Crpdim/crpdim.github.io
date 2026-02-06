@@ -685,7 +685,7 @@ P(D_{train} \ is \ bad) \leq \sum_{\substack{h \in H}} 2 e^{(-2N \varepsilon ^2)
         <content type="html">&lt;h1 id=&#34;机器学习课程01&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习课程01&#34;&gt;#&lt;/a&gt; 机器学习课程 01&lt;/h1&gt;
 &lt;h2 id=&#34;机器学习机器帮忙找函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习机器帮忙找函数&#34;&gt;#&lt;/a&gt; 机器学习 = 机器帮忙找函数&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;机器学习目的： 写一个人类写不出的复杂函数，实现人类想要的功能&lt;/p&gt;
+&lt;p&gt;机器学习目的： 写一个人类写不出的复杂函数，实现人类想要的功能 1&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如：&lt;/p&gt;
 &lt;ul&gt;
