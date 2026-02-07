@@ -1,10 +1,10 @@
 ---
 title: Softmax
-date: 2023/05/30
+date: 2023/06/29
 categories:
 - [人工智能, 深度学习]
 tags: 深度学习
-cover: assets/cuenca.jpg
+cover: assets/pexels-11.jpg
 ---
 
 # Softmax 回归
@@ -293,12 +293,12 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
   owner: "Dive into Deep Learning"
   url: "[https://d2l.ai/](https://d2l.ai/)"
   desc: "《动手学深度学习》Softmax 回归与交叉熵相关章节"
-  image: "assets/cuenca.jpg"
+  image: "assets/pexels-16.jpg"
   color: "#e9546b"
 - site: "PyTorch CrossEntropyLoss 文档"
   owner: "PyTorch"
   url: "[https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)"
   desc: "交叉熵损失函数的定义与输入输出要求"
-  image: "assets/cuenca.jpg"
+  image: "assets/pexels-02.jpg"
   color: "#4e7cff"
   {% endlinks %}
