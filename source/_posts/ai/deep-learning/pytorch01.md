@@ -4,7 +4,7 @@ date: 2023/06/13
 categories:
 - [人工智能, 深度学习]
 tags: 深度学习
-cover: assets/pexels-11.jpg
+cover: assets/pexels-16.jpg
 ---
 
 # PyTorch 求导

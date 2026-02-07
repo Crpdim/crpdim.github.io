@@ -130,11 +130,11 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git pull origin main&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;GitHub&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vZW4vcHVsbC1yZXF1ZXN0cw==&#34; data-background-image=&#34;/assets/mounts.jpg&#34;&gt;&lt;/span&gt;
+&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;GitHub&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vZW4vcHVsbC1yZXF1ZXN0cw==&#34; data-background-image=&#34;/assets/pexels-15.jpg&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vZW4vcHVsbC1yZXF1ZXN0cw==&#34;&gt;GitHub Docs：Pull Requests&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;PR 流程与合并策略（squash / merge / rebase）&lt;/p&gt;
-          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;Git&#34; style=&#34;--block-color:#4e7cff;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS9kb2NzL2dpdC1yZWJhc2U=&#34; data-background-image=&#34;/assets/mounts.jpg&#34;&gt;&lt;/span&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;Git&#34; style=&#34;--block-color:#4e7cff;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS9kb2NzL2dpdC1yZWJhc2U=&#34; data-background-image=&#34;/assets/pexels-11.jpg&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS9kb2NzL2dpdC1yZWJhc2U=&#34;&gt;Git 文档：rebase&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;rebase 的原理、冲突处理与常见用法&lt;/p&gt;

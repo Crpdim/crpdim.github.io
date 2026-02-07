@@ -74,13 +74,13 @@ cover: assets/pexels-02.jpg
   owner: "GitHub"
   url: "https://docs.github.com/en/pull-requests"
   desc: "PR 流程与合并策略（squash / merge / rebase）"
-  image: "assets/mounts.jpg"
+  image: "assets/pexels-15.jpg"
   color: "#e9546b"
 - site: "Git 文档：rebase"
   owner: "Git"
   url: "https://git-scm.com/docs/git-rebase"
   desc: "rebase 的原理、冲突处理与常见用法"
-  image: "assets/mounts.jpg"
+  image: "assets/pexels-11.jpg"
   color: "#4e7cff"
 {% endlinks %}
 
