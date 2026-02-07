@@ -4,7 +4,7 @@ date: 2023/11/12
 categories:
 - [计算机科学, Git]
 tags: 杂项
-cover: assets/pexels-02.jpg
+cover: assets/pexels-20.jpg
 ---
 
 # GitHub 工作流

@@ -4,7 +4,7 @@ date: 2023/06/29
 categories:
 - [人工智能, 深度学习]
 tags: 深度学习
-cover: assets/pexels-06.jpg
+cover: assets/pexels-18.jpg
 ---
 
 # Softmax 回归

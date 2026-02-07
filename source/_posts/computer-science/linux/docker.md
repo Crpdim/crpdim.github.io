@@ -4,7 +4,7 @@ date: 2023/07/10
 categories:
 - [计算机科学, Linux学习]
 tags: 虚拟化容器
-cover: assets/pexels-02.jpg
+cover: assets/pexels-13.jpg
 ---
 
 # Docker

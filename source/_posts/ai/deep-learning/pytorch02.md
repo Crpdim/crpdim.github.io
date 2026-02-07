@@ -4,7 +4,7 @@ date: 2023/06/18
 categories:
 - [人工智能, 深度学习]
 tags: 深度学习
-cover: assets/pexels-11.jpg
+cover: assets/pexels-05.jpg
 ---
 
 # 从零实现线性回归
